@@ -91,3 +91,45 @@ Sure! Here are the lab questions focusing on getting command help, obtaining inf
    - How do you see a list of users currently logged into the system?
 
 These lab questions guide students through using help commands, getting information about their current shell environment, and checking running processes.
+
+Sure! Here are the lab questions focusing on user and group information, user and group creation, modification, password policy setting, and other user management tasks:
+
+### Lab Scenario: User and Group Management
+
+1. **User Information:**
+   - How do you display detailed information about a specific user, including user ID, group ID, and home directory?
+   - How can you list all users on the system?
+
+2. **Group Information:**
+   - How do you display detailed information about a specific group?
+   - How can you list all groups on the system?
+
+3. **User Creation:**
+   - How do you create a new user named `student1` with a home directory?
+   - How can you specify a different shell for the new user `student1` during creation?
+
+4. **Group Creation:**
+   - How do you create a new group named `students`?
+
+5. **Adding User to Group:**
+   - How do you add the user `student1` to the group `students`?
+
+6. **Group Modification:**
+   - How do you change the group name from `students` to `learners`?
+   - How can you add a user to multiple groups?
+
+7. **Password Policy Setting:**
+   - How do you set a password for the user `student1`?
+   - How can you enforce password expiration for the user `student1`?
+
+8. **Modifying User Shell:**
+   - How do you change the login shell for the user `student1` to `/bin/bash`?
+
+9. **Modifying User Home Directory:**
+   - How do you change the home directory of `student1` to `/home/newstudent1`?
+
+10. **Removing User:**
+    - How do you remove the user `student1` from the system?
+
+11. **Removing Group:**
+    - How do you remove the group `learners` from the system?
