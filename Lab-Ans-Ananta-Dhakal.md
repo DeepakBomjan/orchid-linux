@@ -41,7 +41,8 @@ touch README.md
 **ANS:**
 1.Copy README.md to the src directory.
 ```bash
-cp docs /README.md /src
+cp project/docs/README.md project/src/
+
 ```
 2.Navigate to the src directory to confirm the file was copied and list the contents.
 ```bash
