@@ -1,1 +1,1 @@
-###Lab Scenario: Organizing Your Project Files
+### Lab Scenario: Organizing Your Project Files
