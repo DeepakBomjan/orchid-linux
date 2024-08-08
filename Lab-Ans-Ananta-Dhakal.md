@@ -102,5 +102,6 @@ cd project
    mkdir -p project/docs project/src
    ```
 5.Inside the docs directory, create another directory named guides.
+```bash
 mkdir project/docs/guides or cd project/docs  mkdir guides
 ```
