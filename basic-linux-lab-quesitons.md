@@ -133,3 +133,275 @@ Sure! Here are the lab questions focusing on user and group information, user an
 
 11. **Removing Group:**
     - How do you remove the group `learners` from the system?
+   
+Sure! Here’s the lab scenario without the solutions:
+
+### **Lab Scenario: Special Permissions and Shared Folder Collaboration**
+
+#### **Objective:**
+To understand and configure special permissions on a shared folder, and manage user permissions effectively using `umask` and the sticky bit.
+
+#### **Setup:**
+1. **Create a Shared Directory:**
+   - **Folder:** `/shared`
+   - **Description:** This directory will be used by multiple users for collaboration.
+
+2. **Create Users:**
+   - **User1:** `alice`
+   - **User2:** `bob`
+   - **User3:** `carol`
+   - **Description:** These users will collaborate on files in the shared directory.
+
+#### **Steps:**
+
+1. **Create the Shared Directory.**
+
+2. **Set Group Ownership:**
+   - Create a group `collab` and add users to it.
+   - Change the group ownership of the shared directory.
+
+3. **Set Directory Permissions:**
+   - Grant appropriate permissions to the group.
+   - Set the **setgid** bit on the shared directory.
+
+4. **Configure Umask for User Collaboration:**
+   - Set the `umask` value for users to ensure files are created with appropriate default permissions.
+
+5. **Set Sticky Bit on the Shared Directory:**
+
+6. **Testing Permissions and Collaboration:**
+   - **Create Files:**
+     - Log in as `alice` and create a file in `/shared`.
+     - Log in as `bob` and create another file in `/shared`.
+
+   - **Check File Ownership and Permissions.**
+
+   - **Attempt to Delete Files:**
+     - As `alice`, attempt to delete `bob_file.txt`.
+     - As `bob`, attempt to delete `alice_file.txt`.
+
+7. **Review and Summary:**
+   - Verify that new files inherit the group ownership.
+   - Ensure that the `umask` value is configured correctly for the desired default permissions.
+   - Confirm that the sticky bit is functioning as expected by testing file deletion.
+
+Here are several lab scenarios focusing on IP configuration, route tables, hostname management, and network services using various tools and configuration methods:
+
+### **Lab Scenario 1: Basic IP Configuration**
+
+#### **Objective:**
+Configure a static IP address on a Linux machine and verify the configuration.
+
+#### **Setup:**
+- **Machine:** `Server1`
+- **IP Address:** `192.168.1.10`
+- **Netmask:** `255.255.255.0`
+- **Gateway:** `192.168.1.1`
+
+#### **Steps:**
+1. **Assign a Static IP Address:**
+   - Use `ip` commands to configure the IP address.
+
+2. **Verify the IP Configuration:**
+   - Check the assigned IP address using `ip addr show`.
+
+3. **Restart Network Services:**
+   - Restart the network service to apply changes.
+
+4. **Verify Connectivity:**
+   - Ping the gateway and another host on the same network.
+
+---
+
+### **Lab Scenario 2: Route Table Management**
+
+#### **Objective:**
+Configure and verify static routes on a Linux machine.
+
+#### **Setup:**
+- **Network 1:** `192.168.1.0/24` (Local Network)
+- **Network 2:** `10.0.0.0/24` (Remote Network)
+- **Gateway:** `192.168.1.1` (Gateway to `10.0.0.0/24`)
+
+#### **Steps:**
+1. **Add a Static Route:**
+   - Use `ip route add` to create a route to `10.0.0.0/24`.
+
+2. **Verify the Route Table:**
+   - Use `ip route show` to check the current route table.
+
+3. **Test Connectivity:**
+   - Ping an address in the `10.0.0.0/24` network to verify the route.
+
+---
+
+### **Lab Scenario 3: Hostname Management**
+
+#### **Objective:**
+Change and verify the system hostname.
+
+#### **Setup:**
+- **New Hostname:** `Server-XYZ`
+
+#### **Steps:**
+1. **Change the Hostname:**
+   - Use `hostnamectl` to set the new hostname.
+
+2. **Verify the Hostname:**
+   - Check the current hostname using `hostname` and `hostnamectl`.
+
+3. **Update `/etc/hosts`:**
+   - Ensure the new hostname is correctly reflected in the `/etc/hosts` file.
+
+---
+
+### **Lab Scenario 4: DNS Configuration Using `resolvectl`**
+
+#### **Objective:**
+Configure DNS settings and verify DNS resolution.
+
+#### **Setup:**
+- **DNS Server:** `8.8.8.8`
+
+#### **Steps:**
+1. **Configure DNS Server:**
+   - Use `resolvectl` to set the DNS server.
+
+2. **Verify DNS Configuration:**
+   - Check the DNS configuration using `resolvectl status`.
+
+3. **Test DNS Resolution:**
+   - Use `dig` or `nslookup` to resolve a domain name.
+
+---
+
+### **Lab Scenario 5: Network Interface Configuration Using `ip` Commands**
+
+#### **Objective:**
+Configure and verify network interfaces using `ip` commands.
+
+#### **Setup:**
+- **Interface:** `eth0`
+- **IP Address:** `192.168.1.20`
+- **Netmask:** `255.255.255.0`
+
+#### **Steps:**
+1. **Show Network Interfaces:**
+   - Use `ip link show` to list all network interfaces.
+
+2. **Assign IP Address:**
+   - Use `ip addr add` to assign an IP address to `eth0`.
+
+3. **Verify IP Configuration:**
+   - Use `ip addr show` to check the assigned IP address.
+
+4. **Bring Interface Up:**
+   - Use `ip link set` to bring the interface up.
+
+---
+
+### **Lab Scenario 6: Network Configuration Using `netplan`**
+
+#### **Objective:**
+Configure network settings using `netplan`.
+
+#### **Setup:**
+- **Interface:** `eth0`
+- **Static IP Address:** `192.168.1.30`
+- **Netmask:** `255.255.255.0`
+- **Gateway:** `192.168.1.1`
+- **DNS Server:** `8.8.8.8`
+
+#### **Steps:**
+1. **Edit Netplan Configuration:**
+   - Modify the netplan configuration file (usually located in `/etc/netplan/`).
+
+2. **Apply Netplan Configuration:**
+   - Use `netplan apply` to apply the new network configuration.
+
+3. **Verify Configuration:**
+   - Check the network settings using `ip addr show` and `ip route show`.
+
+4. **Test Connectivity:**
+   - Ping the gateway and a public DNS server to ensure proper configuration.
+
+---
+
+These scenarios should cover a range of tasks related to IP configuration, route management, hostname changes, and network configuration using different tools and methods.
+
+Certainly! Here are the lab scenarios without the answers:
+
+### **Lab Scenario 1: Checking Network Statistics**
+
+#### **Objective:**
+Monitor and analyze network connections and statistics.
+
+#### **Setup:**
+- **Tool to Use:** `ss` and `netstat`
+
+#### **Steps:**
+
+1. **Check TCP and UDP Ports Using `ss`:**
+   - List all TCP and UDP sockets.
+   - Display detailed information for each connection.
+
+2. **Check TCP and UDP Ports Using `netstat`:**
+   - List all listening ports.
+   - Display detailed information, including the process name.
+
+3. **Verify Specific Ports:**
+   - Check for a specific port (e.g., port 80) using `ss` or `netstat`.
+
+---
+
+### **Lab Scenario 2: Checking System Resource Usage**
+
+#### **Objective:**
+Monitor system resource usage and performance metrics.
+
+#### **Setup:**
+- **Tools to Use:** `htop`, `top`, `sar`, `iostat`, `ps`
+
+#### **Steps:**
+
+1. **Monitor System Resources Using `htop`:**
+   - Open `htop` to view real-time system resource usage.
+
+2. **Monitor System Resources Using `top`:**
+   - Open `top` to view real-time system resource usage.
+
+3. **Monitor System Performance Using `sar`:**
+   - Display CPU usage statistics.
+   - Display I/O statistics.
+
+4. **Monitor Disk I/O Using `iostat`:**
+   - Display disk I/O statistics.
+
+5. **Check Running Processes Using `ps`:**
+   - Display a list of all processes.
+   - Display processes sorted by memory or CPU usage.
+
+---
+
+### **Lab Scenario 3: Combined Resource Monitoring**
+
+#### **Objective:**
+Perform a comprehensive check on network and system resource usage.
+
+#### **Steps:**
+
+1. **Check Network Connections:**
+   - List all active TCP and UDP connections.
+
+2. **Monitor System Resources:**
+   - Open `htop` or `top` to view real-time CPU and memory usage.
+
+3. **Review Historical Performance Data:**
+   - Use `sar` to analyze past CPU and I/O performance.
+
+4. **Analyze Disk I/O:**
+   - Use `iostat` to monitor disk performance.
+
+5. **Review Running Processes:**
+   - Use `ps` to check resource usage by individual processes.
+
