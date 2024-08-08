@@ -105,3 +105,28 @@ cd project
 ```bash
 mkdir project/docs/guides or cd project/docs  mkdir guides
 ```
+6.Inside the src directory, create a directory named scripts.
+```bash
+mkdir project/src/scripts
+```
+### 2.Navigating the Directory Tree Using Relative Paths:
+**ANS:**
+1.From the project directory, navigate into the docs directory.
+```bash
+cd project/docs
+```
+2.From docs, navigate into the guides directory.
+```bash
+cd docs/guides
+```
+3.From guides, navigate back to the docs directory.
+```bash
+cd . or cd docs
+```
+4.From docs, navigate up to the project directory.
+```bash
+cd project
+```
+5.From project, navigate into the src directory.
+```bash
+
