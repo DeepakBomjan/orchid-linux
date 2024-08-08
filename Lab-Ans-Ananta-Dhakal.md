@@ -6,7 +6,7 @@
    ```
 2. Create a directory named project
    ```bash
-   mkdir project
+    mkdir project
    ```
 3. Navigate into the project directory.
    ```bash
@@ -15,7 +15,9 @@
 **ANS:**
 1. Create two subdirectories named docs and src
 ```bash
-mkdir docs /mkdir src OR mkdir -p project/docs project/src
+sudo mkdir docs
+mkdir src
+ OR mkdir -p project/docs project/src
 ```
 ### 3. Create Files in docs Directory:  
 **ANS:**
