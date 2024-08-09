@@ -345,6 +345,29 @@ sudo groupadd collab
 sudo usermod -G collab alice
 sudo usermod -G collab bob
 sudo usermod -G collab carol
+ 2.Change the group ownership of the shared directory.
+```bash
+sudo chown :collab /shared
+```
+### 3.Set Directory Permissions:
+**ANS:**
+1.Grant appropriate permissions to the group.
+```bash
+sudo chmod g+rwx /shared
+to check ls -ld /shared
+```
+2.Set the setgid bit on the shared directory.
+```bash
+sudo chmod g+s /shared
+ls -ld /shared
+```
+### 3.Set Directory Permissions:
+**ANS:**
+
+
+
+
+
 
 
 
