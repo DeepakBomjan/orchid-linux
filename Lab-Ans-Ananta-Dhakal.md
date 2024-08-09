@@ -296,8 +296,59 @@ sudo usermod -G learner student1 -----here student 1 is a user aaded to a group.
 sudo passwd student1
 ```
 2.How can you enforce password expiration for the user student1?
-sudo chage -M 90 student1- 
+```bash
+sudo chage -M 90 student1- password expires in 90 days
 sudo chage -W 7 student1-this gives the password expiration notification before 7 days
+```
+### 8.Modifying User Shell:
+**ANS:**
+1.How do you change the login shell for the user student1 to /bin/bash?
+```bash
+sudo vi /etc/passwd
+Insert and change the bin/sh to bin/bash then press :wq! to exit
+to check if the shell is changed or not ...echo $SHELL
+```
+### 9.Modifying User Shell:
+**ANS:**
+1.How do you change the home directory of student1 to /home/newstudent1?
+```bash
+sudo usermod -d /home/newstudent1 -m student1
+```
+### 10.Removing User:
+**ANS:**
+1.How do you remove the user student1 from the system?
+```bash
+sudo userdel student1
+```
+### 11.Removing Group:
+**ANS:**
+1.How do you remove the group learners from the system?
+```bash
+sudo groupdel learners
+to check if the group exists or not: getent group learners
+```
+### Lab Scenario: Special Permissions and Shared Folder Collaboration
+**ANS:**
+### 1.Create a Shared Directory:
+**ANS:**
+```bash
+mkdir shared
+```
+sudo useradd alice
+sudo useradd bob
+sudo useradd carol
+### 2.Set Group Ownership:
+**ANS:**
+1.Create a group collab and add users to it.
+```bash
+sudo groupadd collab
+sudo usermod -G collab alice
+sudo usermod -G collab bob
+sudo usermod -G collab carol
+
+
+
+ 
 
 
 
