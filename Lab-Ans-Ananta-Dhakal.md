@@ -132,4 +132,181 @@ cd project
 ```
 5.From project, navigate into the src directory.
 ```bash
+cd src
+```
+6.From src, navigate into the scripts directory.
+``` bash
+cd src
+cd scripts
+```
+### 3.Using Absolute Paths:
+**ANS:**
+1.Navigate to the guides directory using the absolute path from your home directory.
+```bash
+cd project/docs/guides
+```
+2.Navigate to the scripts directory using the absolute path from your home directory.
+```bash
+cd project/src/scripts
+```
+### 4. Using cd Shortcuts:
+**ANS:**
+1.From any directory, navigate to your home directory.
+```bash
+cd ~
+```
+2.From your home directory, navigate back to the last directory you were in.
+```bash
+cd -
+```
+3.From the scripts directory, navigate one level up to the src directory.
+```bash
+cd ..
+```
+4.While in the src directory, navigate to the current directory (no change).
+```bash
+cd .
+```
+5.From any directory, navigate to the root directory of the file system.
+```bash
+cd /
+```
+### Lab Scenario: Exploring Command Help and Shell Information
+**ANS:**
+### 1.Getting Command Help:
+**ANS:**
+1.How do you find out the options and usage of the ls command?
+```bash
+ls --help
+```
+2.How can you display a brief description of the cp command?
+```bash
+cp --help
+```
+3.How do you access the manual pages for the mv command to understand its usage?
+```bash
+man mv
+```
+4.How can you get a one-line description of the rm command?
+```bash
+whatis rm
+```
+### 2.Getting Information About the Current Shell:
+**ANS:**
+1.How do you display the current terminal device name?
+```bash
+who am i
+```
+2.How can you find out which shell you are currently using?
+```bash
+echo $SHELL
+```
+3.How do you display the username of the currently logged-in user?
+```bash
+whoami
+```
+### 3.Checking Running Processes:
+**ANS:**
+1.How do you list all currently running processes?
+```bash
+ps -ef
+```
+2.How can you display detailed information about a specific process?
+```bash
+top
+```
+3.How do you find the processes running by the current user?
+```bash
+ps -u $(whoami)
+```
+### 4.Extra Information:
+**ANS:**
+1.How do you display the current date and time?
+```bash
+date
+```
+2.How can you find out how long the system has been running?
+```bash
+uptime
+```
+3.How do you see a list of users currently logged into the system?
+```bash
+who
+```
+### Lab Scenario: User and Group Management
+**ANS:**
+### 1.User Information:
+**ANS:**
+1.How do you display detailed information about a specific user, including user ID, group ID, and home directory?
+```bash
+id
+```
+2.How can you list all users on the system?
+```bash
+cat /etc/passwd
+```
+### 2.Group Information:
+**ANS:**
+1.How do you display detailed information about a specific group?
+```bash
+getent group project  -----project is the group here..
+```
+2.How can you list all groups on the system?
+```bash
+getent group
+```
+### 3.User Creation:
+**ANS:**
+1.How do you create a new user named student1 with a home directory?
+```bash
+sudo useradd -m student1
+```
+2.How can you specify a different shell for the new user student1 during creation?
+```bash
+cat /etc/shells ----- checkk which shells are available
+sudo useradd -m -s /bin/sh student1
+```
+### 4.Group Creation:
+**ANS:**
+1.How do you create a new group named students?
+```bash
+sudo groupadd students
+```
+### 5.Adding User to Group:
+**ANS:**
+1.How do you add the user student1 to the group students?
+```bash
+sudo usermod -G students student1
+```
+### 6.Group Modification:
+**ANS:**
+1.How do you change the group name from students to learners?
+```bash
+sudo groupmod -n learners students
+```
+2.How can you add a user to multiple groups?
+```bash
+sudo usermod -G group1,group2,group3 student1 ------syntax
+sudo usermod -G learner student1 -----here student 1 is a user aaded to a group..learner is a group.
+```
+### 7.Password Policy Setting:
+**ANS:**
+1.How do you set a password for the user student1?
+```bash
+sudo passwd student1
+```
+2.How can you enforce password expiration for the user student1?
+sudo chage -M 90 student1- 
+sudo chage -W 7 student1-this gives the password expiration notification before 7 days
+
+
+
+
+
+
+
+
+
+
+
 
