@@ -363,8 +363,51 @@ ls -ld /shared
 ```
 ### 3.Set Directory Permissions:
 **ANS:**
+1.Grant appropriate permissions to the group.
+```bash
+sudo g+rwx /shared
+ls -ld /shared
+```
+2.Set the setgid bit on the shared directory.
+```bash
+sudo chmod g+s /shared
+ls -ld /shared
+ls -ld /shared
+```
+### 4.Configure Umask for User Collaboration:
+**ANS:**
+1.Set the umask value for users to ensure files are created with appropriate default permissions.
+```bash
 
+```
+### 5.Set Sticky Bit on the Shared Directory:
+**ANS:**
+```bash
 
+```
+### 6.Testing Permissions and Collaboration:
+**ANS:**
+### 1.Create Files:
+```bash
+
+```
+2.Check File Ownership and Permissions.
+```bash
+
+```
+3.Attempt to Delete Files:
+```bash
+
+```
+### 7.Review and Summary:
+**ANS:**
+```bash
+
+```
+### Lab Scenario 1: Basic IP Configuration
+**ANS:**
+### 1.User Information:
+**ANS:**
 
 
 
