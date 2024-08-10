@@ -2,7 +2,9 @@
 **ANS:**
 1. To navigate to home directory
    ```bash
-   cd or cd ~
+   cd 
+   or
+    cd ~
    ```
 2. Create a directory named project
    ```bash
@@ -33,19 +35,20 @@ touch README.md
    ```
 4. List the files to confirm they are created
    ```bash
-   ls -l
+   ls 
    ```
 ### 4. Copy Files: 
 **ANS:**
 1.Copy README.md to the src directory.
 ```bash
-cp project/docs/README.md project/src/
+cp README.md ../src
+OR
+cp README.md /home/cipher/project/src
 
 ```
 2.Navigate to the src directory to confirm the file was copied and list the contents.
 ```bash
-cd src
-ls
+cd ../src
 ```
 ### 5. Move Files: 
 **ANS:**
@@ -61,22 +64,22 @@ mv README.md INTRO.md
 **ANS:**
 1.Remove the LICENSE file from the docs directory.
 ```bash
-rm docs/LICENSE
+rm ../docs/LICENSE
 ```
 2.Navigate to the docs directory and confirm the file was removed by listing the contents.
 ```bash
-cd docs
+cd ../docs
 ls
 ```   
 ### 7. Remove Directories:
 **ANS:**
 1.Navigate to the parent project directory.
 ```bash
-cd project
+cd ..
 ```
 2.Remove the docs directory and its contents.
 ```bash
-rm -r docs
+rm -rf docs
 ```
 3.Confirm the directory was removed by listing the contents of the parent directory.
 ```bash
@@ -88,7 +91,7 @@ ls
 **ANS:**
 1. Navigate to your home directory
    ```bash
-   cd home
+   cd /home
    ```
 2.Create a directory named project.
 ```bash
@@ -100,33 +103,33 @@ cd project
 ```
 4. Within project, create two subdirectories named docs and src.
    ```bash
-   mkdir -p project/docs project/src
+   mkdir docs src
    ```
 5.Inside the docs directory, create another directory named guides.
 ```bash
-mkdir project/docs/guides or cd project/docs  mkdir guides
+mkdir docs/guides
 ```
 6.Inside the src directory, create a directory named scripts.
 ```bash
-mkdir project/src/scripts
+mkdir src/scripts
 ```
 ### 2.Navigating the Directory Tree Using Relative Paths:
 **ANS:**
 1.From the project directory, navigate into the docs directory.
 ```bash
-cd project/docs
+cd docs
 ```
 2.From docs, navigate into the guides directory.
 ```bash
-cd docs/guides
+cd guides
 ```
 3.From guides, navigate back to the docs directory.
 ```bash
-cd . or cd docs
+cd ..
 ```
 4.From docs, navigate up to the project directory.
 ```bash
-cd project
+cd ..
 ```
 5.From project, navigate into the src directory.
 ```bash
@@ -134,7 +137,6 @@ cd src
 ```
 6.From src, navigate into the scripts directory.
 ``` bash
-cd src
 cd scripts
 ```
 ### 3.Using Absolute Paths:
@@ -152,6 +154,7 @@ cd project/src/scripts
 1.From any directory, navigate to your home directory.
 ```bash
 cd ~
+cd 
 ```
 2.From your home directory, navigate back to the last directory you were in.
 ```bash
