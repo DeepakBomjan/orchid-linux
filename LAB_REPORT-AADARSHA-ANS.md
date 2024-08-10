@@ -15,9 +15,7 @@
 **ANS:**
 1. Create two subdirectories named docs and src
 ```bash
-sudo mkdir docs
-mkdir src
- OR mkdir -p project/docs project/src
+mkdir -p project/{docs,src}
 ```
 ### 3. Create Files in docs Directory:  
 **ANS:**
