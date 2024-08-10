@@ -408,7 +408,7 @@ rm files
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
 ```bash
-
+ip addr
 ```
 ### 1.User Information:
 **ANS:**
