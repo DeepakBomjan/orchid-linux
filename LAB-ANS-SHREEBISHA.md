@@ -380,6 +380,55 @@ ls -ld /shared
 ```bash
 umask u+rwx 
 ```
+### 5. Set the Sticky Bit on the Shared Directory
+
+**1. Set the Sticky Bit on the `shared` Directory**
+   - **Command:**
+     ```bash
+     sudo chmod +t /shared
+     ```
+
+### 6. Testing Permissions and Collaboration
+
+**1. Create Files in the `shared` Directory**
+   - **Command:**
+     ```bash
+     touch /shared/testfile
+     ```
+
+**2. Check File Ownership and Permissions**
+   - **Command:**
+     ```bash
+     ls -l /shared/testfile
+     ```
+
+**3. Attempt to Delete Files (by Different Users)**
+   - **Command:**
+     ```bash
+     rm /shared/testfile
+     ```
+
+### 7. Review and Summary
+
+**1. Summarize the Results of the Permissions Testing**
+   - **Explanation:** 
+     - The `setgid` bit ensures files created in the directory inherit the group ownership of the directory.
+     - The sticky bit prevents users from deleting files they do not own, even if they have write permissions to the directory.
+   - **Command:** No specific command; this is a summary.
+
+---
+
+### Lab Scenario 1: Basic IP Configuration
+
+**1. User Information**
+
+**1. Display the IP Address of the System**
+   - **Command:**
+     ```bash
+     ip a
+     ```
+
+---
 
 
 
