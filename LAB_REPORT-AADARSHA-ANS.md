@@ -4,7 +4,7 @@
    ```bash
    cd 
    or
-    cd ~
+   cd ~
    ```
 2. Create a directory named project
    ```bash
@@ -379,12 +379,12 @@ ls -ld /shared
 **ANS:**
 1.Set the umask value for users to ensure files are created with appropriate default permissions.
 ```bash
-
+umask 002
 ```
 ### 5.Set Sticky Bit on the Shared Directory:
 **ANS:**
 ```bash
-
+umask 002
 ```
 ### 6.Testing Permissions and Collaboration:
 **ANS:**
@@ -407,6 +407,7 @@ ls -ld /shared
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
+
 ### 1.User Information:
 **ANS:**
 
