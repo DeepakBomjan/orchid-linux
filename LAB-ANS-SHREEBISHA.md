@@ -380,34 +380,9 @@ ls -ld /shared
 ```bash
 umask u+rwx 
 ```
-### 5.Set Sticky Bit on the Shared Directory:
-**ANS:**
-```bash
 
-```
-### 6.Testing Permissions and Collaboration:
-**ANS:**
-### 1.Create Files:
-```bash
 
-```
-2.Check File Ownership and Permissions.
-```bash
 
-```
-3.Attempt to Delete Files:
-```bash
-
-```
-### 7.Review and Summary:
-**ANS:**
-```bash
-
-```
-### Lab Scenario 1: Basic IP Configuration
-**ANS:**
-### 1.User Information:
-**ANS:**
 
 
 
