@@ -44,7 +44,7 @@ touch README.md
 ```bash
 cp project/docs/README.md project/src/
 ```
-2.Navigate to the src directory to confirm the file was copied and list the contents.
+### 2.Navigate to the src directory to confirm the file was copied and list the contents.
 ```bash
 cd src
 ls
@@ -402,3 +402,49 @@ ls -ld /shared
 **ANS:**
 ### 1.User Information:
 **ANS:**
+```bash
+ip
+```
+### 2. Verify the IP Configuration:
+**ANS:**
+```bash
+ip addr show
+```
+### 3. Restart Network Services:
+```bash
+sudo reboot
+```
+### 4. Verify Connectivity:
+```bash
+ping
+```
+###  Lab Scenario 2: Route Table Management
+**ANS:** 1.Add a static Route 
+```bash
+ip route add
+```
+2. verify the route table
+   ```bash
+   ip route show
+   ```
+3.  Test Connectivity
+   ```bash
+  ping ip address
+```
+### **Lab Scenario 3: Hostname Management**
+***ANS**1.Change the Hostname:
+```bash
+hostnamectl
+```
+2. Verify the Hostname:
+   ```bash
+   hostname
+   ```
+3. Update:
+   ```bash
+         
+
+
+
+
+
