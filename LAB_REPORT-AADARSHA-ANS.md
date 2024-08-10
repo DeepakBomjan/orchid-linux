@@ -407,10 +407,14 @@ rm files
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
+```bash
 
+```
 ### 1.User Information:
 **ANS:**
-
+```bash
+users
+```
 
 
 
