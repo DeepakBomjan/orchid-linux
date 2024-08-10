@@ -378,7 +378,7 @@ ls -ld /shared
 **ANS:**
 1.Set the umask value for users to ensure files are created with appropriate default permissions.
 ```bash
-
+umask u+rwx 
 ```
 ### 5.Set Sticky Bit on the Shared Directory:
 **ANS:**
