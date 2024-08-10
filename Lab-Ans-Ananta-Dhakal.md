@@ -378,27 +378,38 @@ ls -ld /shared
 **ANS:**
 1.Set the umask value for users to ensure files are created with appropriate default permissions.
 ```bash
-
+umask 007
 ```
 ### 5.Set Sticky Bit on the Shared Directory:
 **ANS:**
 ```bash
-
+sudo chmod +t /shared
 ```
 ### 6.Testing Permissions and Collaboration:
 **ANS:**
 ### 1.Create Files:
 ```bash
-
+touch files
 ```
 2.Check File Ownership and Permissions.
 ```bash
-
+ls -l /shared
 ```
 3.Attempt to Delete Files:
 ```bash
+sudo su alice
+touch /shared
+
+sudo su bob
+touch /shared
 
 ```
+### 6. Check File Ownership and Permissions.
+**ANS:**
+```bash
+ls -l
+```
+
 ### 7.Review and Summary:
 **ANS:**
 ```bash
@@ -406,9 +417,101 @@ ls -ld /shared
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
-### 1.User Information:
-**ANS:**
 
+1.Assign a Static IP Address:
+```bash
+ip a
+```
+2.Verify the IP Configuration:
+```bash
+ip addr show
+```
+3.Restart Network Services:
+
+4..Verify Connectivity:
+```bash
+ping 192.168.1.1
+```
+### Lab Scenario 2: Route Table Management
+**ANS:**
+1.Lab Scenario 2: Route Table Management
+```bash
+ip route add 10.0.0.0/24
+```
+2.Verify the Route Table:
+```bash
+ip route show
+```
+3.Test Connectivity:
+```bash
+Ping 10.0.0.0/24
+```
+### Lab Scenario 3: Hostname Management
+**ANS:**
+1.Change the Hostname
+```bash
+hostnamectl Server-xyz
+```
+2.Verify the Hostname:
+```bash
+to check : hostname
+```
+3.Update /etc/hosts
+```bash
+sudo vi /etc/hosts
+127.0.0.1 Server-XYZ
+```
+### Lab Scenario 4: DNS Configuration Using resolvectl
+**ANS:**
+1.Configure DNS Server:
+```bash
+resolvectl
+```
+2.Verify DNS Configuration:
+```bash
+resolvectl status
+```
+3.Test DNS Resolution
+```bash
+dig
+```
+### Lab Scenario 5: Network Interface Configuration Using ip Commands
+**ANS:**
+1.Show Network Interfaces:
+```bash
+ip link show
+```
+2.Assign IP Address:
+```bash
+ip addr add enp0s3
+```
+3.Verify IP Configuration:
+```bash
+ip addr show
+```
+4.Bring Interface Up:
+```bash
+ip link set
+```
+###Lab Scenario 6: Network Configuration Using netplan
+**ANS:**
+1.Edit Netplan Configuration:
+```bash
+sudo vi /etc/netplan/
+```
+2.Apply Netplan Configuration:
+```bash
+netplan apply
+```
+3.Verify Configuration:
+```bash
+ip addr show
+ip route show
+```
+4.Test Connectivity:
+```bash
+ping 192.168.1.1
+```
 
 
 
