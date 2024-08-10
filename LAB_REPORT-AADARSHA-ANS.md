@@ -384,21 +384,21 @@ umask 002
 ### 5.Set Sticky Bit on the Shared Directory:
 **ANS:**
 ```bash
-umask 002
+chmod +t shared-dir
 ```
 ### 6.Testing Permissions and Collaboration:
 **ANS:**
 ### 1.Create Files:
 ```bash
-
+touch files
 ```
 2.Check File Ownership and Permissions.
 ```bash
-
+ls -l files
 ```
 3.Attempt to Delete Files:
 ```bash
-
+rm files
 ```
 ### 7.Review and Summary:
 **ANS:**
