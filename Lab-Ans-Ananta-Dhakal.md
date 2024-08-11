@@ -78,7 +78,7 @@ cd project
 ```
 2.Remove the docs directory and its contents.
 ```bash
-rm -r docs
+rm -rf docs
 ```
 3.Confirm the directory was removed by listing the contents of the parent directory.
 ```bash
