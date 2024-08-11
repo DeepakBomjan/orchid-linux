@@ -427,5 +427,4 @@ umask u+rwx
      ```bash
      ip a
      ```
-
 ---
