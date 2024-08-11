@@ -408,7 +408,7 @@ ls -ld /shared
 **ANS:**
 ### 1.User Information:
 **ANS:**
-john wick
+-rw-r--r--
 
 
 
