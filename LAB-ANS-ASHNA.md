@@ -43,7 +43,7 @@ touch README.md
 ```bash
 cp README.md ../src
 OR
-cp README.md /home/cipher/project/src
+cp README.md /home/chheyl/project/src
 
 ```
 2.Navigate to the src directory to confirm the file was copied and list the contents.
@@ -335,17 +335,17 @@ to check if the group exists or not: getent group learners
 ```bash
 mkdir shared
 ```
-sudo useradd alice
-sudo useradd bob
-sudo useradd carol
+sudo useradd euria
+sudo useradd bhum
+sudo useradd chheyl
 ### 2.Set Group Ownership:
 **ANS:**
 1.Create a group collab and add users to it.
 ```bash
 sudo groupadd collab
-sudo usermod -G collab alice
-sudo usermod -G collab bob
-sudo usermod -G collab carol
+sudo usermod -G collab euria
+sudo usermod -G collab bhum
+sudo usermod -G collab chheyl
  2.Change the group ownership of the shared directory.
 ```bash
 sudo chown :collab /shared
