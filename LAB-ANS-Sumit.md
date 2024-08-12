@@ -442,6 +442,27 @@ hostnamectl
    ```
 3. Update:
    ```bash
+   /etc/hosts
+   ```
+   ### **Lab Scenario 4: DNS Configuration Using `resolvectl`**
+
+   Steps
+   **ANS**
+   1. Configure DNS Server:
+      ```bash
+      resolvect
+      ```
+   2. Verify DNS Configuration
+    ```bash
+    resolvectl status
+    ```
+   3. Test DNS Resolutions
+      ```bash
+      dig
+      ```    
+
+
+   
          
 
 
