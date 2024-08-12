@@ -424,11 +424,102 @@ umask u+rwx
 
 **1. Display the IP Address of the System**
    - **Command:**
-     ```bash
-     ip a
-     ```
+    *
 
----
+1.Assign a Static IP Address:
+```bash
+ip a
+```
+2.Verify the IP Configuration:
+```bash
+ip addr show
+```
+3.Restart Network Services:
+
+4..Verify Connectivity:
+```bash
+ping 192.168.1.1
+```
+### Lab Scenario 2: Route Table Management
+**ANS:**
+1.Lab Scenario 2: Route Table Management
+```bash
+ip route add 10.0.0.0/24
+```
+2.Verify the Route Table:
+```bash
+ip route show
+```
+3.Test Connectivity:
+```bash
+Ping 10.0.0.0/24
+```
+### Lab Scenario 3: Hostname Management
+**ANS:**
+1.Change the Hostname
+```bash
+hostnamectl Server-xyz
+```
+2.Verify the Hostname:
+```bash
+to check : hostname
+```
+3.Update /etc/hosts
+```bash
+sudo vi /etc/hosts
+127.0.0.1 Server-XYZ
+```
+### Lab Scenario 4: DNS Configuration Using resolvectl
+**ANS:**
+1.Configure DNS Server:
+```bash
+resolvectl
+```
+2.Verify DNS Configuration:
+```bash
+resolvectl status
+```
+3.Test DNS Resolution
+```bash
+dig
+```
+### Lab Scenario 5: Network Interface Configuration Using ip Commands
+**ANS:**
+1.Show Network Interfaces:
+```bash
+ip link show
+```
+2.Assign IP Address:
+```bash
+ip addr add enp0s3
+```
+3.Verify IP Configuration:
+```bash
+ip addr show
+```
+4.Bring Interface Up:
+```bash
+ip link set
+```
+###Lab Scenario 6: Network Configuration Using netplan
+**ANS:**
+1.Edit Netplan Configuration:
+```bash
+sudo vi /etc/netplan/
+```
+2.Apply Netplan Configuration:
+```bash
+netplan apply
+```
+3.Verify Configuration:
+```bash
+ip addr show
+ip route show
+```
+4.Test Connectivity:
+```bash
+ping 192.168.1.1
+```
 
 
 
