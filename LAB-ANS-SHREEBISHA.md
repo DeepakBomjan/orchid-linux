@@ -520,6 +520,28 @@ ip route show
 ```bash
 ping 192.168.1.1
 ```
+###Lab Scenario 1: Checking Network Statistics
+**ANS:**
+1. Check TCP and UDP Ports Using ss:
+   ```bash
+
+   ```
+2. Check TCP and UDP Ports Using netstat:
+     ```bash
+
+   ```
+4. Verify Specific Ports:
+     ```bash
+
+   ```
+   
+###Lab Scenario 2: Checking System Resource Usage
+**ANS:**
+1. Monitor System Resources Using htop:
+     ```bash
+
+   ```
+
 
 
 
