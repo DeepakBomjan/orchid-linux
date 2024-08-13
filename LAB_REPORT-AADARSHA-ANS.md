@@ -83,7 +83,7 @@ rm -rf docs
 ```
 3.Confirm the directory was removed by listing the contents of the parent directory.
 ```bash
-ls
+ls /home/cipher/project
 ```
 ### Lab Scenario: Navigating Your Project Directory Tree
 **ANS:**
@@ -143,11 +143,11 @@ cd scripts
 **ANS:**
 1.Navigate to the guides directory using the absolute path from your home directory.
 ```bash
-cd project/docs/guides
+cd /home/cipher/project/docs/guides
 ```
 2.Navigate to the scripts directory using the absolute path from your home directory.
 ```bash
-cd project/src/scripts
+cd /home/cipher/project/src/scripts
 ```
 ### 4. Using cd Shortcuts:
 **ANS:**
