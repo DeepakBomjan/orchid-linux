@@ -106,6 +106,7 @@ cd project
    ```
 5.Inside the docs directory, create another directory named guides.
 ```bash
+cd docs
 mkdir project/docs/guides or cd project/docs  mkdir guides
 ```
 6.Inside the src directory, create a directory named scripts.
