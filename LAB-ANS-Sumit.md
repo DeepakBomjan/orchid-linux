@@ -42,7 +42,7 @@ touch README.md
 **ANS:**
 1.Copy README.md to the src directory.
 ```bash
-cp project/docs/README.md project/src/
+cd project/docs/README.md project/src/
 ```
 ### 2.Navigate to the src directory to confirm the file was copied and list the contents.
 ```bash
@@ -110,6 +110,7 @@ mkdir project/docs/guides or cd project/docs  mkdir guides
 ```
 6.Inside the src directory, create a directory named scripts.
 ```bash
+ cd ..
 mkdir project/src/scripts
 ```
 ### 2.Navigating the Directory Tree Using Relative Paths:
