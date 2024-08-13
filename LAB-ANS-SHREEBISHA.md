@@ -524,23 +524,62 @@ ping 192.168.1.1
 **ANS:**
 1. Check TCP and UDP Ports Using ss:
    ```bash
-
+ip a
    ```
 2. Check TCP and UDP Ports Using netstat:
      ```bash
-
+ip addr show
    ```
-4. Verify Specific Ports:
-     ```bash
-
+### 3. Restart Network Services:
+```bash
+sudo reboot
+```
+### 4. Verify Connectivity:
+```bash
+ping
+```
+###  Lab Scenario 2: Route Table Management
+**ANS:** 1.Add a static Route 
+```bash
+ip route add
+```
+2. verify the route table
+   ```bash
+   ip route show
    ```
-   
-###Lab Scenario 2: Checking System Resource Usage
-**ANS:**
-1. Monitor System Resources Using htop:
-     ```bash
-
+3.  Test Connectivity
+   ```bash
+  ping ip address
+```
+### **Lab Scenario 3: Hostname Management**
+***ANS**1.Change the Hostname:
+```bash
+hostnamectl
+```
+2. Verify the Hostname:
+   ```bash
+   hostname
    ```
+3. Update:
+   ```bash
+   /etc/hosts
+   ```
+   ### **Lab Scenario 4: DNS Configuration Using `resolvectl`**
+
+   Steps
+   **ANS**
+   1. Configure DNS Server:
+      ```bash
+      resolvect
+      ```
+   2. Verify DNS Configuration
+    ```bash
+    resolvectl status
+    ```
+   3. Test DNS Resolutions
+      ```bash
+      dig
+      ```  
 
 
 
