@@ -450,7 +450,7 @@ ping 10.0.0.0/24
 **ANS:**
 ## 1.Change the Hostname:
 ```bash
-ping 10.0.0.0/24
+sudo hostnamectl set-hostname newname
 ```
 ## 2. Verify the Hostname:
 ```bash
