@@ -461,6 +461,37 @@ hostnamectl //show current hostname settings
 ```bash
 /etc/hosts
 ```
+### Lab Scenario 4: DNS Configuration Using resolvectl
+## 1. Configure DNS Server:
+```bash
+
+```
+## 2. Verify DNS Configuration:
+```bash
+resolvectl status
+```
+## 3. Test DNS Resolution:
+```bash
+
+```
+### Lab Scenario 5: Network Interface Configuration Using ip Commands
+## 1.Show Network Interfaces:
+```bash
+ip link show
+```
+## 2.Assign IP Address:
+```bash
+sudo ip addr add 192.168.56.21/24 dev eth0
+```
+## 3.Verify IP Configuration:
+```bash
+ip addr show
+```
+## 4.Bring Interface Up:
+```bash
+ip link set dev eth0 up
+```
+
 
 
 
