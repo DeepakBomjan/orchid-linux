@@ -459,12 +459,12 @@ hostnamectl //show current hostname settings
 ```
 ## 3. Update /etc/hosts:
 ```bash
-/etc/hosts
+cat /etc/hosts
 ```
 ### Lab Scenario 4: DNS Configuration Using resolvectl
 ## 1. Configure DNS Server:
 ```bash
-
+resolvectl set-default-nameserver 8.8.8.8
 ```
 ## 2. Verify DNS Configuration:
 ```bash
@@ -472,7 +472,7 @@ resolvectl status
 ```
 ## 3. Test DNS Resolution:
 ```bash
-
+nslookup 8.8.8.8
 ```
 ### Lab Scenario 5: Network Interface Configuration Using ip Commands
 ## 1.Show Network Interfaces:
@@ -490,6 +490,33 @@ ip addr show
 ## 4.Bring Interface Up:
 ```bash
 ip link set dev eth0 up
+```
+### Lab Scenario 6: Network Configuration Using netplan
+## 1.Edit Netplan Configuration:
+```bash
+nano /etc/netplan/50-cloud-init.yaml
+# This file is generated from information provided by the datasource. Changes
+# to it will not persist across an instance reboot. To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        enp1s0:
+            dhcp4: true
+    version: 2
+```
+## 2.Apply Netplan Configuration:
+```bash
+sudo netplan try --config-file /tmp/50-cloud-init.yaml
+```
+## 3.Verify Configuration:
+```bash
+
+```
+## 4.Test Connectivity:
+```bash
+
 ```
 
 
