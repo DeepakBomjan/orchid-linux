@@ -79,7 +79,7 @@ cd ..
 ```
 2.Remove the docs directory and its contents.
 ```bash
-rm -rf docs
+rmdir -rf docs
 ```
 3.Confirm the directory was removed by listing the contents of the parent directory.
 ```bash
@@ -309,7 +309,7 @@ sudo vi /etc/passwd
 Insert and change the bin/sh to bin/bash then press :wq! to exit
 to check if the shell is changed or not ...echo $SHELL
 ```
-### 9.Modifying User Shell:
+### 9.Modifying User Home Directory:
 **ANS:**
 1.How do you change the home directory of student1 to /home/newstudent1?
 ```bash
@@ -402,11 +402,65 @@ rm files
 ```
 ### 7.Review and Summary:
 **ANS:**
+1.Verify that new files inherit the group ownership:
+```bash
+
+```
+2.Ensure that the umask value is configured correctly for the desired default permissions:
+```bash
+
+```
+3.Confirm that the sticky bit is functioning as expected by testing file deletion:
 ```bash
 
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
+## 1.Assign a Static IP Address:
+```bash
+ip a
+```
+## 2.Verify the IP Configuration:
+```bash
+ip addr show
+```
+## 3.Restart Network Services:
+```bash
+sudo systemctl restart networking
+```
+## 4.Verify Connectivity:
+```bash
+ping 192.168.1.1
+```
+### Lab Scenario 2: Route Table Management
+**ANS:**
+## 1.Add a Static Route:
+```bash
+ip route add 10.0.0.0/24 via 192.168.1.1 dev enp0s8
+```
+## 2.Verify the Route Table:
+```bash
+ip route show
+```
+## 3.Test Connectivity:
+```bash
+ping 10.0.0.0/24
+```
+### Lab Scenario 3: Hostname Management
+**ANS:**
+## 1.Change the Hostname:
+```bash
+ping 10.0.0.0/24
+```
+## 2. Verify the Hostname:
+```bash
+ping 10.0.0.0/24
+```
+## 3. Update /etc/hosts:
+```bash
+ping 10.0.0.0/24
+```
+
 
 
 
