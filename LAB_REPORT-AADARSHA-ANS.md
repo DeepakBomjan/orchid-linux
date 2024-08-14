@@ -454,11 +454,12 @@ ping 10.0.0.0/24
 ```
 ## 2. Verify the Hostname:
 ```bash
-ping 10.0.0.0/24
+hostname //show only hostname
+hostnamectl //show current hostname settings
 ```
 ## 3. Update /etc/hosts:
 ```bash
-ping 10.0.0.0/24
+/etc/hosts
 ```
 
 
