@@ -143,11 +143,11 @@ cd scripts
 **ANS:**
 1.Navigate to the guides directory using the absolute path from your home directory.
 ```bash
-cd /home/cipher/project/docs/guides
+cd /home/pratik/project/docs/guides
 ```
 2.Navigate to the scripts directory using the absolute path from your home directory.
 ```bash
-cd /home/cipher/project/src/scripts
+cd /home/pratik/project/src/scripts
 ```
 ### 4. Using cd Shortcuts:
 **ANS:**
