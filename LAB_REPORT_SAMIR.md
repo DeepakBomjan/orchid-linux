@@ -403,7 +403,7 @@ rm files
 ### 7.Review and Summary:
 **ANS:**
 ```bash
-
+Learning LINUX OS was a delightful experience. We learnt about basic concept of file management, data manipulation, storage and networking as well as to operate git and github.
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
