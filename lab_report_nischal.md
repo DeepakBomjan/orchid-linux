@@ -403,7 +403,7 @@ rm files
 ### 7.Review and Summary:
 **ANS:**
 ```bash
-
+It was a joyful experience to learn about linux operating sustem. We learned how to make files,directories,data storeage and data management and networking as well as how to use git and github.  
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
