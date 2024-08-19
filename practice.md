@@ -4,7 +4,7 @@ Navigate to the Home Directory:
 
 Change to the /home/student directory and list all files.
 ```
-bash 
+
 ok
 ```
 List Hidden Files:
