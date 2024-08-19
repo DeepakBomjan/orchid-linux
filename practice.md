@@ -50,7 +50,7 @@ Add alice and bob to the developers group, and carol and dave to the managers gr
 ```
 Create Directory Structure:
 
-text, Create the following directory structure inside /opt:
+Create the following directory structure inside /opt:
 /opt/company/
 ├── projects/
 └── reports/
