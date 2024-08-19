@@ -12,6 +12,7 @@ List Hidden Files:
 Display all hidden files in the /home/student directory.
 ```
 la /home/student
+or
 ls /home/student -a
 ```
 Print Current Directory:
@@ -30,10 +31,8 @@ Add New Users:
 
 Add users alice, bob, carol, and dave to the system.
 ```
-useradd alice
-usradd bob
-useradd carol
-useradd dave
+useradd [username]
+
 ```
 Set User Passwords:
 
@@ -45,13 +44,14 @@ Create User Groups:
 
 Create two groups: developers and managers.
 ```
-
+groupadd [groupname]
 ```
 Assign Users to Groups:
 
 Add alice and bob to the developers group, and carol and dave to the managers group.
 ```
-
+sudo usermod -aG [usergroup] [username]
+sudo usermod -aG developers alice
 ```
 Create Directory Structure:
 
