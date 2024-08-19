@@ -4,37 +4,42 @@ Navigate to the Home Directory:
 
 Change to the /home/student directory and list all files.
 ```
-
+cd /home/student
+ls
 ```
 List Hidden Files:
 
 Display all hidden files in the /home/student directory.
 ```
-
+la /home/student
+ls /home/student -a
 ```
 Print Current Directory:
 
 Show the current directory path in the filesystem hierarchy.
 ```
-
+pwd
 ```
 Find User UID:
 
 Identify and print the UID of the currently logged-in user.
 ```
-
+id -u
 ```
 Add New Users:
 
 Add users alice, bob, carol, and dave to the system.
 ```
-
+useradd alice
+usradd bob
+useradd carol
+useradd dave
 ```
 Set User Passwords:
 
 Assign a password for each of the newly created users.
 ```
-
+sudo passwd [username]
 ```
 Create User Groups:
 
