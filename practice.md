@@ -18,6 +18,9 @@ Show the current directory path in the filesystem hierarchy.
 Find User UID:
 
 Identify and print the UID of the currently logged-in user.
+```
+
+```
 Add New Users:
 
 Add users alice, bob, carol, and dave to the system.
