@@ -9,6 +9,9 @@ Change to the /home/student directory and list all files.
 List Hidden Files:
 
 Display all hidden files in the /home/student directory.
+```
+
+```
 Print Current Directory:
 
 Show the current directory path in the filesystem hierarchy.
