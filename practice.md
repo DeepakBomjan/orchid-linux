@@ -60,13 +60,15 @@ Create the following directory structure inside /opt:
 ├── projects/
 └── reports/
 ```
-
+mkdir -p opt/company/{projects,reports}
 ```
 Add Files to Directory:
 
 Create a text file named report.txt inside /opt/company/reports/ and add the content "Quarterly Report Q1".
 ```
-
+cat > /opt/company/reports/report.txt
+Quarterly Report Q1
+ctrl z
 ```
 Change Ownership of Directory:
 
