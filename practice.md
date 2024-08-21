@@ -171,5 +171,5 @@ Save Command History:
 
 Save your command history to a file named student_history.txt in your home directory.
 ```
-
+history > history.txt
 ```
