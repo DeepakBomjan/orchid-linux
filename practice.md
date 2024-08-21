@@ -74,7 +74,10 @@ Change Ownership of Directory:
 
 Set the ownership of the company directory to carol(managers) and the group ownership to managers.
 ```
-
+sudo chown carol company
+sudo chown [owner] [dir]
+sudo chgrp manager company
+sudo chgrp [owner] [dir]
 ```
 Modify File Permissions:
 
