@@ -83,31 +83,33 @@ Modify File Permissions:
 
 Set read and write permissions for the reports directory to the managers group.
 ```
-
+sudo chmod g+rw reports
 ```
 Remove Other Permissions:
 
 Remove all permissions for others on the projects directory and its contents.
 ```
-
+sudo chmod o-rwx projects
 ```
 Print IP Address and Hostname:
 
 Display the current IP address, hostname, and routing table of the system.
 ```
-
+ip a
+hostname
+ip route show
 ```
 Change Hostname:
 
 Update the hostname to corporate-server.
 ```
-
+sudo hostnamectl set-hostname corporative-server
 ```
 Check Internet Connectivity:
 
 Test and confirm internet connectivity from your machine.
 ```
-
+ping 8.8.8.8
 ```
 Check SSH Service Status:
 
