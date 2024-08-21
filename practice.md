@@ -115,53 +115,57 @@ Check SSH Service Status:
 
 Verify if the ssh service is running on the system.
 ```
-
+sudo systemctl status ssh
 ```
 
 Print Filesystem Usage:
 
 Show the filesystem usage statistics for the current system.
 ```
-
+df -a
 ```
 List All Users with a Login Shell:
 
 Print a list of all users on the system who have a valid login shell.
 ```
-
+$ who
 ```
 Add Content to File:
 
 Add the following content to the file data.txt in the home directory:
 2024-08-18: Status Update
+```
+cat > data.txt
+2024-08-18: Status Update
+```
 Task Completed: User Management and File Permissions
-```
 
-```
 Find Lines Matching a Pattern:
 
 Search and print lines containing the word "Update" from the data.txt file.
 
 ```
-
+cat data.txt | grep Update
 ```
 Initialize a Git Repository:
 
 Initialize a Git repository in /opt/company/projects/.
 ```
-
+cd /opt/company/projects/
+git init
 ```
 Add and Commit a README File:
-
-Create a README.md file in the Git repository, add it to the repository, and commit the changes.
+  
 ```
-
+touch README
+git add README
+git commit -m "Commited"
 ```
 Create a New Git Branch:
 
 Create a new branch named featureX001 in the Git repository.
 ```
-
+git checkout -b featureX001
 ```
 Save Command History:
 
