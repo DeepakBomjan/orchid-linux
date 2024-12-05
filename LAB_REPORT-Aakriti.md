@@ -2,7 +2,9 @@
 **ANS:**
 1. To navigate to home directory
    ```bash
-   cd or cd ~
+   cd 
+   or
+   cd ~
    ```
 2. Create a directory named project
    ```bash
@@ -15,9 +17,7 @@
 **ANS:**
 1. Create two subdirectories named docs and src
 ```bash
-sudo mkdir docs
-mkdir src
- OR mkdir -p project/docs project/src
+mkdir -p project/{docs,src}
 ```
 ### 3. Create Files in docs Directory:  
 **ANS:**
@@ -35,19 +35,20 @@ touch README.md
    ```
 4. List the files to confirm they are created
    ```bash
-   ls -l
+   ls 
    ```
 ### 4. Copy Files: 
 **ANS:**
 1.Copy README.md to the src directory.
 ```bash
-cp project/docs/README.md project/src/
+cp README.md ../src
+OR
+cp README.md /home/cipher/project/src
 
 ```
 2.Navigate to the src directory to confirm the file was copied and list the contents.
 ```bash
-cd src
-ls
+cd ../src
 ```
 ### 5. Move Files: 
 **ANS:**
@@ -63,26 +64,26 @@ mv README.md INTRO.md
 **ANS:**
 1.Remove the LICENSE file from the docs directory.
 ```bash
-rm docs/LICENSE
+rm ../docs/LICENSE
 ```
 2.Navigate to the docs directory and confirm the file was removed by listing the contents.
 ```bash
-cd docs
+cd ../docs
 ls
 ```   
 ### 7. Remove Directories:
 **ANS:**
 1.Navigate to the parent project directory.
 ```bash
-cd project
+cd ..
 ```
 2.Remove the docs directory and its contents.
 ```bash
-rm -r docs
+rmdir -rf docs
 ```
 3.Confirm the directory was removed by listing the contents of the parent directory.
 ```bash
-ls
+ls /home/cipher/project
 ```
 ### Lab Scenario: Navigating Your Project Directory Tree
 **ANS:**
@@ -90,7 +91,7 @@ ls
 **ANS:**
 1. Navigate to your home directory
    ```bash
-   cd home
+   cd /home
    ```
 2.Create a directory named project.
 ```bash
@@ -102,33 +103,33 @@ cd project
 ```
 4. Within project, create two subdirectories named docs and src.
    ```bash
-   mkdir -p project/docs project/src
+   mkdir docs src
    ```
 5.Inside the docs directory, create another directory named guides.
 ```bash
-mkdir project/docs/guides or cd project/docs  mkdir guides
+mkdir docs/guides
 ```
 6.Inside the src directory, create a directory named scripts.
 ```bash
-mkdir project/src/scripts
+mkdir src/scripts
 ```
 ### 2.Navigating the Directory Tree Using Relative Paths:
 **ANS:**
 1.From the project directory, navigate into the docs directory.
 ```bash
-cd project/docs
+cd docs
 ```
 2.From docs, navigate into the guides directory.
 ```bash
-cd docs/guides
+cd guides
 ```
 3.From guides, navigate back to the docs directory.
 ```bash
-cd . or cd docs
+cd ..
 ```
 4.From docs, navigate up to the project directory.
 ```bash
-cd project
+cd ..
 ```
 5.From project, navigate into the src directory.
 ```bash
@@ -136,24 +137,24 @@ cd src
 ```
 6.From src, navigate into the scripts directory.
 ``` bash
-cd src
 cd scripts
 ```
 ### 3.Using Absolute Paths:
 **ANS:**
 1.Navigate to the guides directory using the absolute path from your home directory.
 ```bash
-cd project/docs/guides
+cd /home/pratik/project/docs/guides
 ```
 2.Navigate to the scripts directory using the absolute path from your home directory.
 ```bash
-cd project/src/scripts
+cd /home/pratik/project/src/scripts
 ```
 ### 4. Using cd Shortcuts:
 **ANS:**
 1.From any directory, navigate to your home directory.
 ```bash
 cd ~
+cd 
 ```
 2.From your home directory, navigate back to the last directory you were in.
 ```bash
@@ -308,7 +309,7 @@ sudo vi /etc/passwd
 Insert and change the bin/sh to bin/bash then press :wq! to exit
 to check if the shell is changed or not ...echo $SHELL
 ```
-### 9.Modifying User Shell:
+### 9.Modifying User Home Directory:
 **ANS:**
 1.How do you change the home directory of student1 to /home/newstudent1?
 ```bash
@@ -378,36 +379,147 @@ ls -ld /shared
 **ANS:**
 1.Set the umask value for users to ensure files are created with appropriate default permissions.
 ```bash
-umask u+rwx 
+umask 002
 ```
 ### 5.Set Sticky Bit on the Shared Directory:
 **ANS:**
 ```bash
-
+chmod +t shared-dir
 ```
 ### 6.Testing Permissions and Collaboration:
 **ANS:**
 ### 1.Create Files:
 ```bash
-
+touch files
 ```
 2.Check File Ownership and Permissions.
 ```bash
-
+ls -l files
 ```
 3.Attempt to Delete Files:
 ```bash
-
+rm files
 ```
 ### 7.Review and Summary:
 **ANS:**
+1.Verify that new files inherit the group ownership:
+```bash
+
+```
+2.Ensure that the umask value is configured correctly for the desired default permissions:
+```bash
+
+```
+3.Confirm that the sticky bit is functioning as expected by testing file deletion:
 ```bash
 
 ```
 ### Lab Scenario 1: Basic IP Configuration
 **ANS:**
-### 1.User Information:
+## 1.Assign a Static IP Address:
+```bash
+ip a
+```
+## 2.Verify the IP Configuration:
+```bash
+ip addr show
+```
+## 3.Restart Network Services:
+```bash
+sudo systemctl restart networking
+```
+## 4.Verify Connectivity:
+```bash
+ping 192.168.1.1
+```
+### Lab Scenario 2: Route Table Management
 **ANS:**
+## 1.Add a Static Route:
+```bash
+ip route add 10.0.0.0/24 via 192.168.1.1 dev enp0s8
+```
+## 2.Verify the Route Table:
+```bash
+ip route show
+```
+## 3.Test Connectivity:
+```bash
+ping 10.0.0.0/24
+```
+### Lab Scenario 3: Hostname Management
+**ANS:**
+## 1.Change the Hostname:
+```bash
+sudo hostnamectl set-hostname newname
+```
+## 2. Verify the Hostname:
+```bash
+hostname //show only hostname
+hostnamectl //show current hostname settings
+```
+## 3. Update /etc/hosts:
+```bash
+cat /etc/hosts
+```
+### Lab Scenario 4: DNS Configuration Using resolvectl
+## 1. Configure DNS Server:
+```bash
+resolvectl set-default-nameserver 8.8.8.8
+```
+## 2. Verify DNS Configuration:
+```bash
+resolvectl status
+```
+## 3. Test DNS Resolution:
+```bash
+nslookup 8.8.8.8
+```
+### Lab Scenario 5: Network Interface Configuration Using ip Commands
+## 1.Show Network Interfaces:
+```bash
+ip link show
+```
+## 2.Assign IP Address:
+```bash
+sudo ip addr add 192.168.56.21/24 dev eth0
+```
+## 3.Verify IP Configuration:
+```bash
+ip addr show
+```
+## 4.Bring Interface Up:
+```bash
+ip link set dev eth0 up
+```
+### Lab Scenario 6: Network Configuration Using netplan
+## 1.Edit Netplan Configuration:
+```bash
+nano /etc/netplan/50-cloud-init.yaml
+# This file is generated from information provided by the datasource. Changes
+# to it will not persist across an instance reboot. To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        enp1s0:
+            dhcp4: true
+    version: 2
+```
+## 2.Apply Netplan Configuration:
+```bash
+sudo netplan try --config-file /tmp/50-cloud-init.yaml
+```
+## 3.Verify Configuration:
+```bash
+
+```
+## 4.Test Connectivity:
+```bash
+
+```
+
+
 
 
 
@@ -426,3 +538,5 @@ umask u+rwx
 
 
 
+
+## LAB REPORT on linux Basics - Aakriti
